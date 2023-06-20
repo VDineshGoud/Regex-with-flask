@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        h1 {text-align: center;}
+        h2 {text-align: center;}
+        p {text-align: center;}
+        li{text-align: center;}
+        
+     
+     
+    </style>  
+    <title>Regularexpression :</title>
+</head>
+<body style="background-color:powderblue;">
+    <h1 style='color:peru'> Regularexpression</h1>
+    <form method="POST">
+        <h2 ><label  style="color: hsla(252, 88%, 48%, 0.685);font-style: oblique;" class="regex_value"><i>enter Text</i>:-</label></h2>
+       <p> <input class ='regex_value' type="text" id="regex_value" name="regex_value" placeholder="Enter the values" size ="60" ><br><br></p>
+        <h2><label style='color:blueviolet' class="regex101">regex pattern:</label><br></h2>
+        <p><input type="text" id ='regex101' name="regex101"><br></p>
+        <h2><label style="color: rgb(88, 4, 255);"for=submit">click on submit button below </button>:</label><br></h2>
+        <p><input type="submit" value="submit"></p>
+        
+       
+          
+        </form>
+        {%if matches %}
+             <h2>matches:</h2>
+             <ul>
+                {% for match in matches%}
+                     <li>{{ match }}</li>
+                {% endfor%} 
+             </ul>
+             {% else %}
+             <li>no matches found</li>
+        {%endif%}
+    </style>
+</body>
+</html>
